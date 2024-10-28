@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-con">
+            <div class="logo">
+              <a href="#">Thanatip</a>
+            </div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <hr class="divider-nav">
+
+    <div class="container">
+        <section id="home" class="home">
+            <div class="hm">
+                <h2>
+                    I'm <span class="highlight">Thanatip</span><br /> 
+                    a <span class="highlight-italic">Computer Engineer.</span>
+                </h2>
+                <div class="logo-contact">
+                    <a href="https://www.instagram.com/lst.thna/"><img src="images/con1.png" alt="ig" class ="img-logo-contact"></a>
+                    <a href="mailto:champthanatip2005@gmail.com"><img src="images/con2.png" alt="mail" class ="img-logo-contact"></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="images/con3.png" alt="dis" class ="img-logo-contact"></a>
+                </div>
+            </div>
+        <p class="img-me">
+                <img src="images/champ.png" alt="Image 1" class="image1" width="600">
+            </p>
+        </section>
+        <hr class="divider">
+        <section id="about" class="about">
+            <div class="Ab">
+            <p class="img-me1">
+                <img src="images/ab1.png" alt="Image 1" class="image1" width="600">
+                <img src="images/ab2.png" alt="Image 2" class="image2" width="600">
+                <img src="images/ab3.png" alt="Image 3" class="image3" width="600">
+            </p>
+            <div class="skill">
+            <ul>
+                <h1>My Skills</h1>
+                <li>Microcontroller - Arduino, NodeMCU, Micro-bit</li>
+                <li>C</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+            </div>
+        </div>
+            <div class="Ab"> 
+                <h4 id="typewriter-text"></h4>
+                <p class="text">
+                    My name is Thanatip Nitinantakul, but you can call me Champ. I am an 18-year-old <br>
+                    Student majoring in Computer Engineering at King Mongkut's University of Technology Thonburi (KMUTT). <br>
+                    I chose this field because of my passion for technology and innovation. <br>
+                    I enjoy programming and working with electrical circuits. In my free time, <br>
+                    I love watching movies and listening to music.
+                </p>
+                <h5>Education</h5>
+                <div class="school">
+                    <ul>
+                      <li>Naluang School, Grade 7 - 9</li>
+                      <li>Naluang School, Grades 10-12 (Science-Math Program).</li>
+                      <li>King Mongkut's University of Technology Thonburi, Bachelor's Degree in Computer Engineering.</li>
+                    </ul>
+                  </div>
+            </div>
+        </section>
+        <hr class="divider">
+        <section id="portfolio" class="portfolio">
+            <div class="port">
+                <h3>My PORTFOLIO</h3>
+            <p class="text">This is my portfolio for applying to the Computer Engineering program at<br />
+            King Mongkut's University of Technology Thonburi (KMUTT) and Kasetsart University (KU).</p>
+            </div>
+
+            <div class="slider">
+                <div class="slides">
+                    <img src="images/1.png" alt="page 1" class="slide active" >
+                    <img src="images/2.png" alt="page 2" class="slide" >
+                    <img src="images/3.png" alt="page 3" class="slide" >
+                    <img src="images/4.png" alt="page 4" class="slide" >
+                    <img src="images/5.png" alt="page 5" class="slide" >
+                    <img src="images/6.png" alt="page 6" class="slide" >
+                    <img src="images/7.png" alt="page 7" class="slide" >
+                    <img src="images/8.png" alt="page 8" class="slide" >
+                    <img src="images/9.png" alt="page 9" class="slide" >
+                    <img src="images/10.png" alt="page 10" class="slide" >
+                    <img src="images/11.png" alt="page 11" class="slide" >
+                    <img src="images/12.png" alt="page 12" class="slide" >
+                    <img src="images/13.png" alt="page 13" class="slide" >
+                </div>
+                <div class="arrow">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact"></section>
+        <footer>
+            <div class="footer-content">
+                <h3>Thanatip Nitinantakul</h3>
+                <p>Thank you for visiting my website. Feel free to contact me through any of the platforms below:</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/lst.thna/"><img src="images/con1.png" alt="Email" width="30"></a>
+                    <a href="mailto:champthanatip2005@gmail.com"><img src="images/con2.png" alt="Instagram" width="30"></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="images/con3.png" alt="Discord" width="30"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Thanatip Nitinantakul | All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+
+    </div>
+    <script src="move.js"></script>
+</body>
+</html>

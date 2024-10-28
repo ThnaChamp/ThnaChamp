@@ -1,0 +1,333 @@
+body {
+  background-color: #ffffff;
+  color: #061042;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth; /* เลื่อนหน้าจอแบบ smooth */
+}
+
+nav {
+  position: fixed; /* ทำให้ navbar อยู่คงที่เมื่อเลื่อน */
+  top: 0px; /* ซ่อน navbar ด้านบนของหน้าจอ */
+  left: 0;
+  width: 100%; /* ความกว้างของ navbar เต็มหน้าจอ */
+  z-index: 1000; /* ทำให้ navbar อยู่ด้านบนของเนื้อหาทั้งหมด */
+  background-color: rgba(249, 249, 249, 0.8); /* เพิ่มความโปร่งใสบางๆ */
+  backdrop-filter: blur(10px); /* ทำให้พื้นหลังเบลอเล็กน้อย */
+  transition: top 0.3s ease; /* ทำให้การเลื่อนดูนุ่มนวล */
+  font-size: 1.3rem;
+}
+
+.nav-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  max-width: 75vw;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  font-weight: bolder;
+}
+
+.menu li {
+  list-style: none;
+  margin-left: 4rem;
+}
+
+.nav-con a {
+  color: #061042;
+  text-decoration: none;
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+.logo a:hover {
+  color: #0f549d;
+}
+
+.menu li a {
+  position: relative;
+  color: #061042;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6f00;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #0f549d;
+}
+
+.menu li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.img-me:hover {
+  transform: scale(1.15);
+}
+
+.divider-nav{
+  border: none;
+  border-bottom: 1px solid #efeeee;
+  width: 99%;
+  margin: 0 auto;
+}
+
+.divider {
+  border: none;
+  border-bottom: 3px solid #efeeee;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ปรับ container ให้เป็นแนวตั้งแทน */
+.container {
+  display: block; /* จาก flex เป็น block เพื่อแสดงผลแนวตั้ง */
+  height: auto; /* ปรับความสูงอัตโนมัติ */
+}
+
+.container {
+  margin-top: 90px; /* เว้นระยะด้านบนเพื่อให้ไม่ถูกทับกับ navbar */
+}
+
+
+section {
+  width: 100%;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.home {
+  display: flex; /* ใช้ Flexbox */
+  align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
+  justify-content: space-between; /* จัดให้มีช่องว่างระหว่างเนื้อหาและรูป */
+  max-width: 75vw; /* กำหนดความกว้างสูงสุด */
+  margin: 0 auto; /* จัดให้อยู่กลาง */
+  padding: 50px 20px; /* เพิ่ม padding */
+  font-size: 2.6rem;
+  text-align:justify;
+}
+
+.home h2 {
+  font-size: 2.5rem; /* ขนาดตัวอักษรพื้นฐาน */
+  line-height: 1.5; /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
+
+.home .highlight {
+  font-size: 3.4rem; /* ขนาดตัวอักษรที่ใหญ่ขึ้นสำหรับ "Thanatip" */
+  font-weight: bold; /* ทำให้ข้อความหนา */
+  color: #0475d8;
+}
+
+.home .highlight-italic {
+  font-size: 2.8rem; /* ขนาดตัวอักษรสำหรับ "Computer Engineer" */
+  font-style: italic; /* ทำให้ข้อความเป็นตัวเอียง */
+  color:#ff5500;
+  
+}
+
+.img-me {
+  margin-left: 20px; /* กำหนดระยะห่างจากเนื้อหา */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.img-me1 {
+  margin-right: 100px; /* กำหนดระยะห่างจากเนื้อหา */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.img-me1 {
+  position: relative;
+  width: 500px; /* ตั้งค่าให้เท่ากับความกว้างของภาพ */
+  height: 500px; /* ตั้งค่าให้เท่ากับความสูงของภาพ */
+  overflow: hidden;
+}
+
+.img-me1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0; /* เริ่มต้นด้วยความโปร่งใส 0 */
+  transition: opacity 0.5s ease-in-out; /* เพิ่มเอฟเฟกต์การเปลี่ยนแปลง */
+}
+
+.img-me1 img.active {
+  opacity: 1; /* แสดงภาพที่ใช้งานอยู่ */
+}
+
+
+.about, .portfolio{
+  display: flex; /* ใช้ Flexbox */
+  align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
+  justify-content: space-between; /* จัดให้มีช่องว่างระหว่างเนื้อหาและรูป */
+  max-width: 75vw; /* กำหนดความกว้างสูงสุด */
+  margin: 0 auto; /* จัดให้อยู่กลาง */
+  padding: 50px 20px; /* เพิ่ม padding */
+  font-size: 2.6rem;
+  text-align:justify;
+}
+
+
+.text {
+  font-size: 1rem;
+  line-height: 60px;
+  color: #061042;
+}
+
+.slider {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto; /* จัดให้อยู่กลาง */
+  align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
+}
+
+.arrow {
+  position: relative;
+  align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
+  margin-left: 175px;
+}
+
+.slides {
+  margin-top: 20px;
+  display: flex;
+  transition: transform 0.5s ease;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.logo-contact{
+  display: flex; /* ใช้ Flexbox */
+  text-align:justify;
+}
+
+.logo-contact a{
+  transition: transform 0.3s ease;
+}
+
+.logo-contact a:hover{
+transform: scale(1.2)
+}
+
+.img-logo-contact{
+  max-width: 45px;
+  margin-right:20px;
+}
+
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.socials a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.socials a img {
+  width: 30px;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  margin: 0;
+}
+
+
+.school ul{
+  font-size: 1.2rem;
+}
+
+.school ul li{
+  margin-top: 30px;
+}
+
+.skill ul{
+  font-size: 1.2rem;
+}
+
+.skill ul li{
+  margin-top: 20px;
+}
+
+.typewriter h4 {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid;
+  width: fit-content;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  font-size: 2rem;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from {
+      border-right-color: transparent;
+  }
+  to {
+      border-right-color: black;
+  }
+}
